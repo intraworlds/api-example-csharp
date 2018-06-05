@@ -1,0 +1,88 @@
+﻿ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>IntraWorlds API</title>
+     <link href="css/styles.css" rel="stylesheet" type="text/css" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="js/jquery.json-view.js"></script>
+     <link href="css/jquery.json-view.css" rel="stylesheet">
+     <script src="js/functions.js"></script>
+
+
+
+     <meta charset="UTF-8">
+ </head>
+ <body >
+
+ 	<div id="page">
+
+ 		<div id="header">
+
+ 			<p id="greeting">Welcome to IntraWorlds REST-API</p>
+
+ 			<img src="images/logo.png" alt="IW logo" id="logo">
+
+ 		</div>
+
+ 		
+
+ 		<div id="input_area">
+            <form id="input">
+
+                URL: <br>
+                <input type="text" value="https://" id="url" required onkeyup="buttonAbility()" onblur="handleHttpsInUrl();"><br><br>
+
+
+
+                Consumer key:
+                <input type="text" id="username" required onkeyup="buttonAbility()" value=""><br><br>
+
+                Consumer secret:
+                <input type="text" id="password" required onkeyup="buttonAbility()" value=""><br><br>
+
+                <div id="method_payload">
+                    <div id="method_div">
+                        Method:
+                        <select id="method" onchange="disablePayload();buttonAbility();">
+                            <option value="default"> -- </option>
+                            <option value="GET"> GET </option>
+                            <option value="POST"> POST </option>
+                            <option value="PUT"> PUT </option>
+                            <option value="DELETE"> DELETE </option>
+                        </select> <br><br>
+
+                    </div>
+                    <div id="payload_div">
+                        Payload:
+                        <textarea type="text" id="payload" disabled="true" onkeyup="buttonAbility()"></textarea><br><br>
+
+                    </div>
+
+
+                </div>
+
+                <div id="button_div">
+                    <button type="button" id="button" onclick="getResponse()" disabled="true">Request data</button><br><br>
+
+                </div>
+
+            </form>
+ 		</div>
+
+ 		
+
+ 		<div id="loader"> 
+ 		</div> 
+ 		<div id="response_div">
+ 			<pre id="response_area"></pre>
+
+ 		</div>
+
+
+ 	</div >
+
+
+
+ </body>
+ </html> 
+

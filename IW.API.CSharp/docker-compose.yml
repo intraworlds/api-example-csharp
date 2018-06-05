@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  iw.api.csharp:
+    image: iwapicsharp
+    ports:
+      - "8888:80"
+    build:
+      context: .
+      dockerfile: IW.API.CSharp/Dockerfile

@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  iw.api.csharp:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
